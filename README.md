@@ -133,6 +133,42 @@ CosyVoice2-0.5B 没有 spk2info.pt ·[议题 #729 ·FunAudioLLM/CosyVoice](https
 根据上面的issus，需要手动下载[spk2info.pt](https://github.com/user-attachments/files/18149385/spk2info.zip)文件粘贴到pretrained_models/CosyVoice2-0.5B中，随后重新运行webui.py就能看到预训练模型：
 
 
+
+若出现：E:\anaconda3\envs\cosyvoice\lib\site-packages\pydub\utils.py:198: RuntimeWarning: Couldn't find ffprobe or avprobe - defaulting to ffprobe, but may not work
+  warn("Couldn't find ffprobe or avprobe - defaulting to ffprobe, but may not work", RuntimeWarning)
+  是因为未安装ffmpeg，需要安装ffmpeg 
+
+ 1.  访问官网下载页面
+前往 [FFmpeg 官方下载页](https://ffmpeg.org/download.html)，选择 Windows 版本（如 (Windows Builds by BtbN)[https://github.com/BtbN/FFmpeg-Builds/releases]）。
+
+2.  选择适合的版本
+
+- 下载 ffmpeg-master-latest-win64-gpl.zip（64位系统）或 ffmpeg-master-latest-win32-gpl.zip（32位系统）。
+
+- 如果不需要额外编解码器，选择 gpl 版本即可。
+
+3. 解压文件
+将下载的 ZIP 文件解压到任意目录（如 C:\ffmpeg）。
+
+4. 配置环境变量
+
+- 右键点击“此电脑” → “属性” → “高级系统设置” → “环境变量”。
+
+- 在“系统变量”中找到 Path，点击“编辑” → “新建”，添加 FFmpeg 的 bin 目录路径（如 C:\ffmpeg\bin）。
+
+- 点击“确定”保存。
+
+5. 验证安装
+打开命令提示符（CMD）或 PowerShell，输入：
+
+bash
+复制
+``` cmd
+ffmpeg -version
+```
+若显示版本信息，则安装成功。
+
+
 **Basic Usage**
 
 We strongly recommend using `CosyVoice2-0.5B` for better performance.
