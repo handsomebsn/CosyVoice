@@ -123,6 +123,16 @@ pip install ttsfrd_dependency-0.1-py3-none-any.whl
 pip install ttsfrd-0.4.2-cp310-cp310-linux_x86_64.whl
 ```
 
+预训练音色为空的情况：
+
+
+CosyVoice2-0.5B 没有 spk2info.pt ·[议题 #729 ·FunAudioLLM/CosyVoice](https://github.com/FunAudioLLM/CosyVoice/issues/729
+)
+
+
+根据上面的issus，需要手动下载[spk2info.pt](https://github.com/user-attachments/files/18149385/spk2info.zip)文件粘贴到pretrained_models/CosyVoice2-0.5B中，随后重新运行webui.py就能看到预训练模型：
+
+
 **Basic Usage**
 
 We strongly recommend using `CosyVoice2-0.5B` for better performance.
